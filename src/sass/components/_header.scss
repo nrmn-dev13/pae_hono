@@ -1,0 +1,104 @@
+.header {
+  background-color: $color-white;
+  .navbar {
+    padding: 30px 0 0;
+    .container {
+      .btn.btn-primary {
+        width: 45px;
+        height: 38px;
+        border: 1px solid $color-blue;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        .fas.fa-home {
+          color: $color-blue;
+        }
+      }
+      .navbar-brand {
+        width: 92px;
+        height: 80px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        .img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .dropdown--nav {
+        background-color: transparent;
+        .btn.dropdown-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &::after {
+            display: none;
+          }
+          .fas.fa-user-circle {
+            color: $color-blue;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 140.62%;
+          }
+          .fas.fa-chevron-down {
+            margin-left: 15px;
+          }
+        }
+        .dropdown-menu {
+          padding: 15px;
+          left: auto;
+          right: 0;
+          border: none;
+          background-color: $color-white;
+          box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.12),
+            0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+          border-radius: 0px 0px 6px 6px;
+          li {
+            margin-bottom: 16px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .dropdown-header {
+            padding: 15px;
+            background-color: #f5f5f5;
+            .dropdown-title {
+              font: normal 20px/28px Roboto;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            address {
+              font: 400 14px/20px Roboto;
+              margin: 0%;
+            }
+          }
+          .dropdown-item {
+            padding: 0;
+            font: normal 16px/20px Roboto;
+            color: #52575C;
+            &:hover {
+              background-color: transparent;
+            }
+            .icon--dropdown {
+              margin-right: 15px;
+              color: $color-black;
+            }
+            &--logout {
+              color: $color-red;
+              .icon--dropdown {
+                color: $color-red;
+              } 
+            }
+          }
+        }
+      }
+    }
+  }
+}
