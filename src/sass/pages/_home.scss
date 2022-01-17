@@ -1,0 +1,100 @@
+.webapp--home {
+  .section {
+    &--headline {
+      margin-bottom: 60px;
+    }
+    &--card {
+      margin-bottom: 60px;
+      .card-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          height: 104px;
+          flex: 1 1 auto;
+          padding: 15px;
+          box-sizing: border-box;
+          position: relative;
+          .card-title {
+            font: normal 16px/22px Roboto;
+            margin: 0;
+            color: $color-white;
+          }
+          .image-wrapper {
+            width: 114px;
+            height: 79px;
+            overflow: hidden;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+          &--blue {
+            background-color: #457b9d;
+          }
+          &--green {
+            background-color: #2a9d8f;
+          }
+          &--orange {
+            background-color: #d4a373;
+          }
+        }
+      }
+    }
+    &--information {
+      .title {
+        font: bold 24px/34px Merriweather;
+        margin-bottom: 30px;
+        color: $color-black;
+      }
+      .card {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 30px;
+        border: none;
+        .card-content {
+          .badge {
+            padding: 3px 10px;
+            background-color: #fff3cd;
+            border-radius: 4px;
+            color: $color-blue;
+            font: bold 12px/17px Roboto;
+            margin-bottom: 15px;
+          }
+          .title {
+            color: $color-black;
+            font: bold 16px/22px Roboto;
+            margin-bottom: 5px;
+          }
+          .text {
+            color: $color-black;
+            font: bold 12px/24px Roboto;
+            margin-bottom: 0px;
+          }
+        }
+        .image-wrapper {
+          width: 75px;
+          height: 75px;
+          overflow: hidden;
+          margin: 0;
+          display: flex;
+          flex: 0 0 auto;
+          margin-left: 15px;
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

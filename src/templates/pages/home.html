@@ -4,7 +4,94 @@
 <header class="header">
   {% include "partials/navigation.html" %}
 </header>
-<main class="webapp">
+<main class="webapp webapp--home">
+  <section class="section section--headline">
+    <div class="container">
+      <h1 class="headline">Hi Masrama,</h1>
+      <h2 class="sub-headline">Explore page to find more information</h2>
+    </div>
+  </section>
+  <section class="section section--card">
+    <div class="container">
+      <div class="slider-wrapper">
+        <div class="card-list slider">
+          <div class="card card--dashboard card--blue">
+            <h4 class="card-title">Prepare for Covid</h4>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/dashboard-card.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+          <div class="card card--dashboard card--green">
+            <h4 class="card-title">Get tested for Covid</h4>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/dashboard-card.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+          <div class="card card--dashboard card--orange">
+            <h4 class="card-title">Monitoring</h4>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/dashboard-card.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--information">
+    <div class="container">
+      <h4 class="title">NZ PUBLIC HEALTH PROCESS</h4>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <div class="badge">Day 0</div>
+              <h6 class="title">First 24 Hours of Home Isolation</h6>
+              <p class="text">Isolate yourself or any whanau that is suspected to have been infected by the infectious disease while waiting for the test result. </p>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/process-one.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <div class="badge">Day 2</div>
+              <h6 class="title">After 48 Hours of Home Isolation</h6>
+              <p class="text">If severe symptoms haven’t manifested and you feel like you can continue isolating at home without requiring any medical care</p>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/process-two.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <div class="badge">Day 7</div>
+              <h6 class="title">Health Assessment</h6>
+              <p class="text">Your home isolation will be finished when you are free from the virus if you don't need another 1 week of isolation.</p>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/process-three.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <div class="badge">Day 14</div>
+              <h6 class="title">Health Assessment</h6>
+              <p class="text">Your home isolation is complete when you and your family at home have been declared free of the virus if no more isolation is needed.</p>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/dashboard/process-three.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 {% endblock %}
