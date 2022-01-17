@@ -53,33 +53,6 @@
         color: $color-black;
       }
       .card {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-bottom: 30px;
-        border: none;
-        .card-content {
-          .badge {
-            padding: 3px 10px;
-            background-color: #fff3cd;
-            border-radius: 4px;
-            color: $color-blue;
-            font: bold 12px/17px Roboto;
-            margin-bottom: 15px;
-          }
-          .title {
-            color: $color-black;
-            font: bold 16px/22px Roboto;
-            margin-bottom: 5px;
-          }
-          .text {
-            color: $color-black;
-            font: bold 12px/24px Roboto;
-            margin-bottom: 0px;
-          }
-        }
         .image-wrapper {
           width: 75px;
           height: 75px;

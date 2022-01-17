@@ -1,0 +1,56 @@
+<!-- index.html -->
+{% extends "layout.html" %} {% block content %}
+
+<header class="header">
+  {% include "partials/navigation.html" %}
+</header>
+<main class="webapp webapp--preparation">
+  <section class="section section--preparation">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Preparation for covid
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <h6 class="title">Whānau plan</h6>
+              <a href="" class="link">
+                See detail
+                <div class="icon-wrapper">
+                  <i class="icon icon--detail  fas fa-chevron-right"></i>
+                </div> 
+              </a>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/preparation/preparation-one.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-content">
+              <h6 class="title">Whare Kit and Covid Medicine Kit</h6>
+              <a href="" class="link">
+                See detail
+                <div class="icon-wrapper">
+                  <i class="icon icon--detail fas fa-chevron-right"></i>
+                </div> 
+              </a>
+            </div>
+            <figure class="image-wrapper">
+              <img src="assets/img/preparation/preparation-two.svg" alt="" class="img img-fluid">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

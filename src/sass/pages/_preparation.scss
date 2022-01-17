@@ -1,0 +1,42 @@
+.webapp--preparation {
+  .section {
+    &--preparation {
+      .card {
+        .card-content {
+          .title {
+            font: bold 20px/28px Roboto;
+            margin-bottom: 15px;
+          }
+          .link {
+            display: flex;
+            align-items: center;
+            font: normal 14px/20px Roboto;
+            color: $color-blue;
+            .icon-wrapper {
+              margin-left: 5px;
+              width: 14px;
+              height: 14px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex: 0 0 auto;
+              background-color: $color-blue;
+              border-radius: 50%;
+              .icon--detail {
+                color: $color-white;
+                font-size: 8px;
+                line-height: normal;
+              }
+            }
+          }
+        }
+        .image-wrapper {
+          width: 170px;
+          height: 100px;
+          overflow: hidden;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
