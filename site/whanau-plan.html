@@ -1,0 +1,422 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> 
+<![endif]-->
+<!--[if IE 7]>         
+<html class="no-js lt-ie9 lt-ie8" lang=""> 
+<![endif]-->
+<!--[if IE 8]>         
+<html class="no-js lt-ie9" lang=""> 
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">		
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">		
+	<link href="./assets/css/jquery-steps.css" rel="stylesheet">
+	<link href="./assets/css/style.min.css" rel="stylesheet">
+
+	<script src="./assets/js/vendor/jquery.min.js"></script>	
+	<script src="./assets/js/vendor/jquery-steps.min.js"></script>
+	<script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script defer src="./assets/js/main.js"></script>
+	<!-- <script src="./assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	
+
+<header class="header">
+  <nav class="navbar navbar-light">
+  <div class="container">
+    <a href="home.html" class="btn btn-primary">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="navbar-brand" href="home.html">
+      <img src="assets/img/logo.png" alt="" class="img img-fluid" />
+    </a>
+    <div class="dropdown dropdown--nav">
+      <button
+        type="button"
+        class="btn dropdown-toggle"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-expanded="false"
+      >
+        <i class="fas fa-user-circle"></i>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+					<div class="dropdown-header">
+						<h6 class="dropdown-title">Masrama</h6>
+						<address>masramadtcm@gmail.com</address>
+					</div>
+				</li>
+        <li><a class="dropdown-item" href="#">
+					<i class="icon icon--dropdown fas fa-lock"></i> Account Setting
+				</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item dropdown-item--logout" href="#">
+					<i class="icon icon--dropdown fas fa-sign-out-alt"></i> Logout
+				</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</header>
+<main class="webapp webapp--whanau">
+  <section class="section section--whanau">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="home.html" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Whānau Plan
+        </a>
+      </div>
+      <div class="tabs">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill" data-bs-target="#pills-personal" type="button" role="tab" aria-controls="pills-personal" aria-selected="true">Personal Details</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-whanau-tab" data-bs-toggle="pill" data-bs-target="#pills-whanau" type="button" role="tab" aria-controls="pills-whanau" aria-selected="false">Number of Whanau</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-support-tab" data-bs-toggle="pill" data-bs-target="#pills-support" type="button" role="tab" aria-controls="pills-support" aria-selected="false">Support People</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-provider-tab" data-bs-toggle="pill" data-bs-target="#pills-provider" type="button" role="tab" aria-controls="pills-provider" aria-selected="false">Health Provider/s</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-marae-tab" data-bs-toggle="pill" data-bs-target="#pills-marae" type="button" role="tab" aria-controls="pills-marae" aria-selected="false">Marae and Iwi</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+            <form class="form">
+              <div class="inner-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <label for="sharing" class="check-wrapper">
+                      <input type="checkbox" id="sharing" class="form-control form-control--check">
+                      <div class="custom-check">
+                        <div class="box">
+                          <i class="icon icon--check fas fa-check"></i>
+                        </div>
+                        <p class="text">Tick to hide this info when sharing information</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Date of birth</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <label class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" placeholder="Mobile Number">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label class="form-label">Address</label>
+                  <textarea class="form-control" placeholder="Address" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button--black">Save Changes</button>
+                <button class="button button--black-outline button--has-icon">
+                  <i class="icon icon--share fas fa-share"></i>
+                  Share Information
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-whanau" role="tabpanel" aria-labelledby="pills-whanau-tab">
+            <form class="form">
+              <div class="inner-wrapper">
+                <div class="row">
+                  <div class="col-6">
+                    <label class="form-label form-label--has-input">
+                      Number of whanau at home :
+                      <input type="number" class="form-control" placeholder="0">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button--black">Save Changes</button>
+                <button class="button button--black-outline button--has-icon">
+                  <i class="icon icon--share fas fa-share"></i>
+                  Share Information
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-support" role="tabpanel" aria-labelledby="pills-support-tab">
+            <form class="form">
+              <div class="inner-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Eg. Masrama">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Mobile number</label>
+                    <input type="text" class="form-control" placeholder="+64 21 123 4567">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <label class="form-label">Enter their email so we can invite them to Pae Hono</label>
+                    <input type="email" class="form-control" placeholder="Eg. masaramadotcom@gmail.com">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button class="button button--black-outline">Add</button>
+                  </div>
+                </div>
+                <div class="external-field">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="title">Masrama</h4>
+                          <div class="card-item">
+                            <i class="fas fa-phone-alt"></i> +64 21 123 4567
+                          </div>
+                          <div class="card-item">
+                            <i class="fas fa-envelope"></i> masramadotcom@gmail.com
+                          </div>
+                        </div>
+                        <div class="action">
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="title">Masrama</h4>
+                          <div class="card-item">
+                            <i class="fas fa-phone-alt"></i> +64 21 123 4567
+                          </div>
+                          <div class="card-item">
+                            <i class="fas fa-envelope"></i> masramadotcom@gmail.com
+                          </div>
+                        </div>
+                        <div class="action">
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="title">Masrama</h4>
+                          <div class="card-item">
+                            <i class="fas fa-phone-alt"></i> +64 21 123 4567
+                          </div>
+                          <div class="card-item">
+                            <i class="fas fa-envelope"></i> masramadotcom@gmail.com
+                          </div>
+                        </div>
+                        <div class="action">
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="title">Masrama</h4>
+                          <div class="card-item">
+                            <i class="fas fa-phone-alt"></i> +64 21 123 4567
+                          </div>
+                          <div class="card-item">
+                            <i class="fas fa-envelope"></i> masramadotcom@gmail.com
+                          </div>
+                        </div>
+                        <div class="action">
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="title">Masrama</h4>
+                          <div class="card-item">
+                            <i class="fas fa-phone-alt"></i> +64 21 123 4567
+                          </div>
+                          <div class="card-item">
+                            <i class="fas fa-envelope"></i> masramadotcom@gmail.com
+                          </div>
+                        </div>
+                        <div class="action">
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button--black">Save Changes</button>
+                <button class="button button--black-outline button--has-icon">
+                  <i class="icon icon--share fas fa-share"></i>
+                  Share Information
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-provider" role="tabpanel" aria-labelledby="pills-provider-tab">
+            <form class="form">
+              <div class="inner-wrapper">
+                <div class="row">
+                  <div class="col-6">
+                    <label class="form-label">Find and select your health provider/s</label>
+                    <div class="input-wrapper">
+                      <input type="text" class="form-control">
+                      <button class="button button--black-outline button--add">Add</button>
+                    </div>
+                    <ol class="list list--form">
+                      <li class="list__item">
+                        <p class="text">Health provider one</p>
+                        <i class="icon icon--trash fas fa-trash"></i>
+                      </li>
+                      <li class="list__item">
+                        <p class="text">Health provider two</p>
+                        <i class="icon icon--trash fas fa-trash"></i>
+                      </li>
+                      <li class="list__item">
+                        <p class="text">Health provider three</p>
+                        <i class="icon icon--trash fas fa-trash"></i>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button--black">Save Changes</button>
+                <button class="button button--black-outline button--has-icon">
+                  <i class="icon icon--share fas fa-share"></i>
+                  Share Information
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-marae" role="tabpanel" aria-labelledby="pills-marae-tab">
+            <form class="form">
+              <div class="inner-wrapper">
+                <h4 class="form-title">Pae Hono will request support if you or your whānau have Covid</h4>
+                <div class="row">
+                  <div class="col">
+                    <label for="marae" class="check-wrapper">
+                      <input type="checkbox" id="marae" class="form-control form-control--check">
+                      <div class="custom-check">
+                        <div class="box">
+                          <i class="icon icon--check fas fa-check"></i>
+                        </div>
+                        <p class="text">Tick to hide Marae and Iwi information</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col--inline">
+                    <label class="form-label">Hauora org </label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Auckland PHO Limited</option>
+                      <option value="1">Auckland PHO Limited</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col--inline">
+                    <label class="form-label">Marae</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Hikairo (Te Rena)</option>
+                      <option value="1">Hikairo (Te Rena)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="external-field">
+                  <div class="row">
+                    <div class="col-6">
+                      <label class="form-label">Find and select your iwi name</label>
+                      <div class="input-wrapper">
+                        <input type="text" class="form-control">
+                        <button class="button button--black-outline button--add">Add</button>
+                      </div>
+                      <ol class="list list--form">
+                        <li class="list__item">
+                          <p class="text">Ngāti Kahu</p>
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </li>
+                        <li class="list__item">
+                          <p class="text">Ngāti Kurī</p>
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </li>
+                        <li class="list__item">
+                          <p class="text">Ngāpuhi</p>
+                          <i class="icon icon--trash fas fa-trash"></i>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button--black">Save Changes</button>
+                <button class="button button--black-outline button--has-icon">
+                  <i class="icon icon--share fas fa-share"></i>
+                  Share Information
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+</body>
+
+</html>
