@@ -33,7 +33,7 @@ $(document).ready(function () {
     // Toggle password
     $(".icon--password").click(function () {
       var password = $(this).prev(".form-control--password");
-      $(this).toggleClass('fas fa-eye fas fa-eye-slash')
+      $(this).toggleClass("fas fa-eye fas fa-eye-slash");
       if (password.attr("type") === "password") {
         password.attr("type", "text");
       } else {
@@ -42,16 +42,25 @@ $(document).ready(function () {
     });
   }
   function handleReadMore() {
-    $('.button--read-more').click(function () {
-      if ($(this).closest(".alert").hasClass('expanded')) {
+    $(".button--read-more").click(function () {
+      if ($(this).closest(".alert").hasClass("expanded")) {
         $(this).html("Read More");
       } else {
         $(this).html("Less");
       }
-      $(this).closest(".alert").toggleClass('expanded');
-    })
+      $(this).closest(".alert").toggleClass("expanded");
+    });
+  }
+  function handleCheckall() {
+    $("#whare-kit").click(function () {
+      $(".check-whare:checkbox").not(this).prop("checked", this.checked);
+    });
+    $("#medicine-kit").click(function () {
+      $(".check-medicine:checkbox").not(this).prop("checked", this.checked);
+    });
   }
   handleGuideStep();
   handleToggleNav();
   handleReadMore();
+  handleCheckall();
 });

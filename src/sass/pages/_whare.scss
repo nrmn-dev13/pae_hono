@@ -1,0 +1,26 @@
+.webapp--whare {
+  .section {
+    &--whare {
+      .check-wrapper {
+        margin-bottom: 14px;
+      }
+      .card {
+        border: 1px solid $color-black;
+        box-sizing: border-box;
+        border-radius: 8px;
+        .check-wrapper {
+          margin: 0;
+          .custom-check {
+            .text {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+        .image-wrapper {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

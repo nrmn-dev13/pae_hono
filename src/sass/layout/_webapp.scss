@@ -118,6 +118,17 @@
       font: bold 20px/28px Roboto;
       color: $color-blue;
       margin-bottom: 18px;
+      &--black {
+        color: $color-black;
+      }
+    }
+    .text-helper {
+      font: normal 14px/20px Roboto;
+      color: $color-black;
+      margin-bottom: 30px;
+      .fas {
+        color: $color-blue;
+      }
     }
     .form-label {
       font: normal 16px/22px Roboto;
