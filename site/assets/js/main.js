@@ -67,16 +67,27 @@ $(document).ready(function () {
       $(".alert").addClass("close");
     });
   }
-  var resendEmailModal = new bootstrap.Modal(
-    document.getElementById("resendModal"),
-    {}
-  );
-  document.onreadystatechange = function () {
-    resendEmailModal.show();
-  };
+  function handleSlider() {
+    $('.slider--dashboard').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+      prevArrow: $(".prev-arrow"),
+      nextArrow: $(".next-arrow"),
+      mobileFirst: true,
+      infinite: false,
+      responsive: [
+        {
+           breakpoint: 768,
+           settings: "unslick"
+        }
+     ]
+    });
+  }
   handleGuideStep();
   handleToggleNav();
   handleReadMore();
   handleCheckall();
   handleCloseAlert();
+  handleSlider();
 });

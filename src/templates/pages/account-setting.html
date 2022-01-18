@@ -155,5 +155,13 @@
     </div>
   </div>
 </div>
-
+<script>
+  var resendEmailModal = new bootstrap.Modal(
+    document.getElementById("resendModal"),
+    {}
+  );
+  document.onreadystatechange = function () {
+    resendEmailModal.show();
+  };
+</script>
 {% endblock %}
