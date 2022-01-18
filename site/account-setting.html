@@ -124,7 +124,14 @@
               </div>
               <div class="col-sm-12 col-md-12 col-lg-6">
                 <label class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" placeholder="Confirm Password">
+                <div class="input-wrapper">
+                  <input type="password" class="form-control form-control--password error" placeholder="Confirm Password">
+                  <i class="icon icon--password fas fa-eye"></i>
+                  <div class="error-wrapper">
+                    <i class="icon icon--error fas fa-info-circle"></i>
+                    <p class="text text--error">Those passwords didn’t match. Try again.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
