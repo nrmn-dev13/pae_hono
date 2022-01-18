@@ -85,59 +85,52 @@
 </nav>
 
 </header>
-<main class="webapp webapp--test-covid">
-  <section class="section section--list">
+<main class="webapp webapp--setting">
+  <section class="section section--setting">
     <div class="container">
       <div class="navigation-back">
         <a href="home.html" class="action-wrapper">
           <div class="icon-wrapper">
             <i class="icon icon--back fas fa-arrow-left"></i>
           </div>
-          Get Tested for Covid
+          Account Setting
         </a>
       </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <div class="card">
-            <div class="card-content">
-              <h6 class="title m-0">Find a testing station near you</h6>
+      <form class="form form--setting">
+        <div class="inner-wrapper">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Name">
             </div>
-            <figure class="image-wrapper">
-              <img src="assets/img/tested/test-one.svg" alt="" class="img img-fluid">
-            </figure>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Eg. masramadtcm@gmail.com">
+            </div>
+          </div>
+          <div class="external-field">
+            <div class="row">
+              <div class="col--multiple-label col-sm-12 col-md-12 col-lg-6">
+                <label class="form-label">Current Password</label>
+                <p class="text-helper">(Leave blank if you don't want to change it)</p>
+                <input type="password" class="form-control" placeholder="Current Password">
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col--multiple-label col-sm-12 col-md-12 col-lg-6">
+                <label class="form-label">New Password</label>
+                <p class="text-helper">(Minimum 6 characters)</p>
+                <input type="password" class="form-control" placeholder="New Password">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <div class="card">
-            <div class="card-content">
-              <h6 class="title m-0">At the testing station ask for an urgent test and assistance with Kai</h6>
-            </div>
-            <figure class="image-wrapper">
-              <img src="assets/img/tested/test-two.svg" alt="" class="img img-fluid">
-            </figure>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <div class="card">
-            <div class="card-content">
-              <h6 class="title m-0">Contact your support person, your job and work and income</h6>
-            </div>
-            <figure class="image-wrapper">
-              <img src="assets/img/tested/test-three.svg" alt="" class="img img-fluid">
-            </figure>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <div class="card">
-            <div class="card-content">
-              <h6 class="title m-0">Isolate yourself and whānau until test result come back</h6>
-            </div>
-            <figure class="image-wrapper">
-              <img src="assets/img/tested/test-four.svg" alt="" class="img img-fluid">
-            </figure>
-          </div>
-        </div>
-      </div>
+        <button class="button button--black single--buton">Save Changes</button>
+      </form>
     </div>
   </section>
 </main>

@@ -267,6 +267,15 @@
         width: 50%;
       }
     }
+    .col--multiple-label {
+      .form-label {
+        margin: 0;
+      }
+      .text-helper {
+        margin-bottom: 15px;
+        font: normal 12px/17px Roboto;
+      }
+    }
     .button-wrapper {
       display: flex;
       align-items: center;
@@ -284,6 +293,14 @@
           }
         }
       }
+    }
+    .single--buton {
+      width: max-content;
+      margin-top: 14px;
+    }
+    &--setting {
+      background-color: $color-white;
+      padding: 15px;
     }
   }
   .section {
