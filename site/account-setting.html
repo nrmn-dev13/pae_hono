@@ -45,8 +45,7 @@
 	<![endif]-->
 	
 
-<header class="header">
-  <nav class="navbar navbar-light">
+<header class="header"><nav class="navbar navbar-light">
   <div class="container">
     <a href="home.html" class="btn btn-primary">
       <i class="fas fa-home"></i>
@@ -83,7 +82,6 @@
     </div>
   </div>
 </nav>
-
 </header>
 <main class="webapp webapp--setting">
   <section class="section section--setting">
@@ -98,38 +96,99 @@
       </div>
       <form class="form form--setting">
         <div class="inner-wrapper">
+          <div class="alert alert-success" role="alert">
+            Your email has been updated
+            <i class="icon icon--close-alert fas fa-times"></i>
+          </div>
+          <div class="alert alert-success" role="alert">
+            Email confirmation success
+            <i class="icon icon--close-alert fas fa-times"></i>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            This email is already in use
+            <i class="icon icon--close-alert fas fa-times"></i>
+          </div>
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
               <label class="form-label">Name</label>
-              <input type="text" class="form-control" placeholder="Name">
+              <input type="text" class="form-control" placeholder="Name" />
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" placeholder="Eg. masramadtcm@gmail.com">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Eg. masramadtcm@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="card card--form">
+                <div class="card-content">
+                  <h4 class="title">Email Change</h4>
+                  <p class="text">
+                    Check your email <strong>masramaysf@gmail.com</strong> to
+                    confirm your email address, the change won’t take effect
+                    until confirmed
+                  </p>
+                  <p class="text">
+                    Don’t see a confirmation email?
+                    <a href="" class="link">Resend email confirmation</a>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="external-field">
             <div class="row">
               <div class="col--multiple-label col-sm-12 col-md-12 col-lg-6">
                 <label class="form-label">Current Password</label>
-                <p class="text-helper">(Leave blank if you don't want to change it)</p>
-                <input type="password" class="form-control" placeholder="Current Password">
+                <p class="text-helper">
+                  (Leave blank if you don't want to change it)
+                </p>
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    class="form-control form-control--password"
+                    placeholder="Current Password"
+                  />
+                  <i class="icon icon--password fas fa-eye"></i>
+                  <div class="error-wrapper">
+                    <p class="text text--error">Error messsage.</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row align-items-end">
               <div class="col--multiple-label col-sm-12 col-md-12 col-lg-6">
                 <label class="form-label">New Password</label>
                 <p class="text-helper">(Minimum 6 characters)</p>
-                <input type="password" class="form-control" placeholder="New Password">
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    class="form-control form-control--password disabled"
+                    placeholder="New Password"
+                  />
+                  <i class="icon icon--password fas fa-eye"></i>
+                  <div class="error-wrapper">
+                    <p class="text text--error">Error messsage.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-sm-12 col-md-12 col-lg-6">
                 <label class="form-label">Confirm Password</label>
                 <div class="input-wrapper">
-                  <input type="password" class="form-control form-control--password error" placeholder="Confirm Password">
+                  <input
+                    type="password"
+                    class="form-control form-control--password error"
+                    placeholder="Confirm Password"
+                  />
                   <i class="icon icon--password fas fa-eye"></i>
                   <div class="error-wrapper">
-                    <i class="icon icon--error fas fa-info-circle"></i>
-                    <p class="text text--error">Those passwords didn’t match. Try again.</p>
+                    <p class="text text--error">
+                      Confirm password does not match
+                    </p>
                   </div>
                 </div>
               </div>
@@ -141,6 +200,42 @@
     </div>
   </section>
 </main>
+
+<div
+  class="modal fade"
+  id="resendModal"
+  tabindex="-1"
+  aria-labelledby="resendModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resendModalLabel">
+          Resend Email Confirmation
+        </h5>
+        <button
+          type="button"
+          class="button button--close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text">
+          Hi masrama, this will resend email confirmation to
+          <strong>masramaysf@gmail.com</strong>
+        </p>
+        <div class="button-wrapper">
+          <button type="button" class="button button--grey">Resend</button>
+          <button type="button" class="button button--black-outline" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

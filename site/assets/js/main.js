@@ -62,8 +62,21 @@ $(document).ready(function () {
       $(".check-suplement:checkbox").not(this).prop("checked", this.checked);
     });
   }
+  function handleCloseAlert() {
+    $(".icon--close-alert").click(function () {
+      $(".alert").addClass("close");
+    });
+  }
+  var resendEmailModal = new bootstrap.Modal(
+    document.getElementById("resendModal"),
+    {}
+  );
+  document.onreadystatechange = function () {
+    resendEmailModal.show();
+  };
   handleGuideStep();
   handleToggleNav();
   handleReadMore();
   handleCheckall();
+  handleCloseAlert();
 });
