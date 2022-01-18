@@ -58,6 +58,9 @@ $(document).ready(function () {
     $("#medicine-kit").click(function () {
       $(".check-medicine:checkbox").not(this).prop("checked", this.checked);
     });
+    $("#suplement-list").click(function () {
+      $(".check-suplement:checkbox").not(this).prop("checked", this.checked);
+    });
   }
   handleGuideStep();
   handleToggleNav();

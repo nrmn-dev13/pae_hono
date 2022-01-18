@@ -1,0 +1,121 @@
+<!-- index.html -->
+{% extends "layout.html" %} {% block content %}
+
+<header class="header">
+  {% include "partials/navigation.html" %}
+</header>
+<main class="webapp webapp--suplement">
+  <section class="section section--suplement">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="home.html" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Suplement List
+        </a>
+      </div>
+      <form class="form">
+        <div class="inner-wrapper">
+          <h4 class="form-title form-title--black">Hi, Please tick the suplemen item to start taking now</h4>
+          <div class="row">
+            <div class="col">
+              <label for="suplement-list" class="check-wrapper">
+                <input type="checkbox" id="suplement-list" class="form-control form-control--check">
+                <div class="custom-check">
+                  <div class="box">
+                    <i class="icon icon--check fas fa-check"></i>
+                  </div>
+                  <p class="text">Select All</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card">
+                <div class="card-content">
+                  <label for="suplement-one" class="check-wrapper">
+                    <input type="checkbox" id="suplement-one" class="form-control form-control--check check-suplement">
+                    <div class="custom-check">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
+                      <p class="text">Zinc</p>
+                    </div>
+                  </label>
+                </div>
+                <figure class="image-wrapper">
+                  <img src="assets/img/medkit/zinc-img.svg" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card">
+                <div class="card-content">
+                  <label for="suplement-two" class="check-wrapper">
+                    <input type="checkbox" id="suplement-two" class="form-control form-control--check check-suplement">
+                    <div class="custom-check">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
+                      <p class="text">Magnesium</p>
+                    </div>
+                  </label>
+                </div>
+                <figure class="image-wrapper">
+                  <img src="assets/img/medkit/magnesium-img.svg" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card">
+                <div class="card-content">
+                  <label for="suplement-three" class="check-wrapper">
+                    <input type="checkbox" id="suplement-three" class="form-control form-control--check check-suplement">
+                    <div class="custom-check">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
+                      <p class="text">Vitamin C</p>
+                    </div>
+                  </label>
+                </div>
+                <figure class="image-wrapper">
+                  <img src="assets/img/medkit/vitc-img.svg" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card">
+                <div class="card-content">
+                  <label for="suplement-four" class="check-wrapper">
+                    <input type="checkbox" id="suplement-four" class="form-control form-control--check check-suplement">
+                    <div class="custom-check">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
+                      <p class="text">Vitamin D</p>
+                    </div>
+                  </label>
+                </div>
+                <figure class="image-wrapper">
+                  <img src="assets/img/medkit/vitd-img.svg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="button button--black">Save Changes</button>
+          <button class="button button--black-outline button--has-icon">
+            <i class="icon icon--share fas fa-share"></i>
+            Share Information
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
