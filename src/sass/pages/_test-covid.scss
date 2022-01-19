@@ -1,29 +1,24 @@
-.webapp--preparation {
+.webapp--test-covid {
   .section--list {
     .card {
       .card-content {
         .title {
-          font: normal 14px/20px Roboto;
+          font: bold 14px/20px Roboto;
           @include for-size(tablet) {
-            font: normal 20px/28px Roboto;
+            font: bold 16px/22px Roboto;
           }
           @include for-size(desktop) {
-            font: normal 20px/28px Roboto;
-          }
-        }
-        .link {
-          font: normal 12px/17px Roboto;
-          @include for-size(tablet) {
-            font: normal 14px/20px Roboto;
-          }
-          @include for-size(desktop) {
-            font: normal 14px/20px Roboto;
+            font: bold 16px/22px Roboto;
           }
         }
       }
       .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 75px;
         height: 45px;
+        margin-left: 20px;
         @include for-size(tablet) {
           width: 170px;
           height: 100px;
