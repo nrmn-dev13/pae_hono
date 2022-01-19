@@ -87,11 +87,26 @@
     padding: 15px;
     .nav {
       box-shadow: inset 0px -1px 0px #e0e0e0;
+      flex-wrap: nowrap;
+      overflow: auto;
+      white-space: nowrap;
+      @include for-size(tablet) {
+        flex-wrap: nowrap;
+      }
+      @include for-size(desktop) {
+        flex-wrap: wrap;
+      }
       .nav-item {
         .nav-link {
-          font: normal 16px/22px Roboto;
           color: $color-black;
           padding: 15px;
+          font: normal 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: normal 16px/22px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 16px/22px Roboto;
+          }
           &.active {
             color: $color-blue;
             border-radius: 0;
@@ -109,9 +124,15 @@
     align-items: stretch;
     justify-content: space-between;
     .form-title {
-      font: bold 20px/28px Roboto;
       color: $color-blue;
       margin-bottom: 18px;
+      font: normal 14px/20px Roboto;
+      @include for-size(tablet) {
+        font: normal 16px/22px Roboto;
+      }
+      @include for-size(desktop) {
+        font: bold 20px/28px Roboto;
+      }
       &--black {
         color: $color-black;
       }
@@ -125,9 +146,15 @@
       }
     }
     .form-label {
-      font: normal 16px/22px Roboto;
       margin-bottom: 15px;
       color: $color-black;
+      font: normal 14px/20px Roboto;
+      @include for-size(tablet) {
+        font: normal 16px/22px Roboto;
+      }
+      @include for-size(desktop) {
+        font: normal 16px/22px Roboto;
+      }
       &--has-input {
         width: 100%;
         display: flex;
@@ -139,8 +166,14 @@
       }
     }
     .form-control {
-      font: normal 16px/22px Roboto;
       color: $color-black;
+      font: normal 14px/20px Roboto;
+      @include for-size(tablet) {
+        font: normal 16px/22px Roboto;
+      }
+      @include for-size(desktop) {
+        font: normal 16px/22px Roboto;
+      }
     }
     .check-wrapper {
       position: relative;
@@ -248,8 +281,34 @@
       justify-content: center;
       position: relative;
       .button--add {
-        margin-left: 30px;
-        padding: 8px 38px;
+        margin-left: 15px;
+        padding: 10px;
+        @include for-size(tablet) {
+          padding: 8px 38px;
+          margin-left: 30px;
+        }
+        @include for-size(desktop) {
+          padding: 8px 38px;
+          margin-left: 30px;
+        }
+        .text {
+          display: none;
+          @include for-size(tablet) {
+            display: block;
+          }
+          @include for-size(desktop) {
+            display: block;
+          }
+        }
+        .icon--plus {
+          display: block;
+          @include for-size(tablet) {
+            display: none;
+          }
+          @include for-size(desktop) {
+            display: none;
+          }
+        }
       }
       .form-control {
         padding-right: 44px;
@@ -301,6 +360,15 @@
         &:last-child {
           margin-bottom: 0;
         }
+        .text {
+          font: normal 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: normal 16px/22px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 16px/22px Roboto;
+          }
+        }
         .icon--trash {
           position: absolute;
           top: 50%;
@@ -314,13 +382,28 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       .form-label {
         font-weight: bold;
-        width: 50%;
-        margin: 0;
+        width: 100%;
+        margin: 0 0 15px;
+        @include for-size(tablet) {
+          width: 50%;
+          margin: 0;
+        }
+        @include for-size(desktop) {
+          width: 50%;
+          margin: 0;
+        }
       }
       .form-select {
-        width: 50%;
+        width: 100%;
+        @include for-size(tablet) {
+          width: 50%;
+        }
+        @include for-size(desktop) {
+          width: 50%;
+        }
       }
     }
     .col--multiple-label {
@@ -332,17 +415,49 @@
         font: normal 12px/17px Roboto;
       }
     }
+    .col--single-button {
+      .button--add {
+        padding: 7.5px 35px;
+        width: 100%;
+        @include for-size(tablet) {
+          width: max-content;
+        }
+        @include for-size(desktop) {
+          width: max-content;
+        }
+      }
+    }
     .button-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: column;
       background-color: #f6f8fb;
       margin: 0 -15px;
       padding: 30px 0;
+      @include for-size(tablet) {
+        flex-direction: row;
+      }
+      @include for-size(desktop) {
+        flex-direction: row;
+      }
       .button {
         font: normal 16px/22px Roboto;
         min-width: 172px;
         padding: 7.5px 14.5px;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include for-size(tablet) {
+          width: auto;
+          margin-bottom: 0px;
+        }
+        @include for-size(desktop) {
+          width: auto;
+          margin-bottom: 0px;
+        }
         &.button--has-icon {
           .icon {
             margin-right: 10px;
