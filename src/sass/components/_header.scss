@@ -1,24 +1,40 @@
 .header {
-  background-color: #F6F8FB;
+  background-color: #f6f8fb;
   .navbar {
     padding: 30px 0 0;
     .container {
       .btn.btn-primary {
-        width: 45px;
-        height: 38px;
+        width: 30px;
+        height: 30px;
         border: 1px solid $color-blue;
         background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 0 0 auto;
+        @include for-size(tablet) {
+          width: 45px;
+          height: 38px;
+        }
+        @include for-size(desktop) {
+          width: 45px;
+          height: 38px;
+        }
         .fas.fa-home {
           color: $color-blue;
+          font-size: 12px;
+          line-height: 24px;
+          @include for-size(tablet) {
+            font-size: 14px;
+          }
+          @include for-size(desktop) {
+            font-size: 14px;
+          }
         }
       }
       .navbar-brand {
-        width: 92px;
-        height: 80px;
+        width: 50px;
+        height: 45px;
         overflow: hidden;
         margin: 0 auto;
         padding: 0;
@@ -26,6 +42,18 @@
         align-items: center;
         justify-content: center;
         flex: 0 0 auto;
+        position: absolute;
+        top: auto;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        @include for-size(tablet) {
+          width: 92px;
+          height: 80px;
+        }
+        @include for-size(desktop) {
+          width: 92px;
+          height: 80px;
+        }
         .img {
           height: 100%;
           width: 100%;
@@ -44,11 +72,31 @@
           .fas.fa-user-circle {
             color: $color-blue;
             font-weight: 900;
-            font-size: 36px;
-            line-height: 140.62%;
+            font-size: 12px;
+            line-height: 17px;
+            @include for-size(tablet) {
+              font-size: 36px;
+              line-height: 51px;
+            }
+            @include for-size(desktop) {
+              font-size: 36px;
+              line-height: 51px;
+            }
           }
           .fas.fa-chevron-down {
-            margin-left: 15px;
+            margin-left: 7.5px;
+            font-size: 12px;
+            line-height: 17px;
+            @include for-size(tablet) {
+              margin-left: 15px;
+              font-size: 18px;
+              line-height: 25px;
+            }
+            @include for-size(desktop) {
+              margin-left: 15px;
+              font-size: 18px;
+              line-height: 25px;
+            }
           }
         }
         .dropdown-menu {
@@ -82,7 +130,7 @@
           .dropdown-item {
             padding: 0;
             font: normal 16px/20px Roboto;
-            color: #52575C;
+            color: #52575c;
             &:hover {
               background-color: transparent;
             }
@@ -94,7 +142,7 @@
               color: $color-red;
               .icon--dropdown {
                 color: $color-red;
-              } 
+              }
             }
           }
         }
