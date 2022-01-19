@@ -27,8 +27,14 @@
     .action-wrapper {
       display: flex;
       align-items: center;
-      font: bold 28px/39px Roboto;
+      font: bold 16px/22px Roboto;
       color: $color-blue;
+      @include for-size(tablet) {
+        font: bold 28px/39px Roboto;
+      }
+      @include for-size(desktop) {
+        font: bold 28px/39px Roboto;
+      }
       .icon-wrapper {
         width: 30px;
         height: 30px;

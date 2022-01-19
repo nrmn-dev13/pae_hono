@@ -1,0 +1,38 @@
+.webapp--preparation {
+  .section--list {
+    .card {
+      .card-content {
+        .title {
+          font: normal 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: normal 20px/28px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 20px/28px Roboto;
+          }
+        }
+        .link {
+          font: normal 12px/17px Roboto;
+          @include for-size(tablet) {
+            font: normal 14px/20px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 14px/20px Roboto;
+          }
+        }
+      }
+      .image-wrapper {
+        width: 75px;
+        height: 45px;
+        @include for-size(tablet) {
+          width: 170px;
+          height: 100px;
+        }
+        @include for-size(desktop) {
+          width: 170px;
+          height: 100px
+        }
+      }
+    }
+  }
+}
