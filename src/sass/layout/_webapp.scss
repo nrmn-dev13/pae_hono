@@ -126,9 +126,9 @@
     .form-title {
       color: $color-blue;
       margin-bottom: 18px;
-      font: normal 14px/20px Roboto;
+      font: bold 14px/20px Roboto;
       @include for-size(tablet) {
-        font: normal 16px/22px Roboto;
+        font: bold 16px/22px Roboto;
       }
       @include for-size(desktop) {
         font: bold 20px/28px Roboto;
@@ -466,8 +466,14 @@
       }
     }
     .single--buton {
-      width: max-content;
+      width: 100%;
       margin-top: 14px;
+      @include for-size(tablet) {
+        width: max-content;
+      }
+      @include for-size(desktop) {
+        width: max-content;
+      }
     }
     .card--form {
       border: 1px solid #d5d5d5;
@@ -476,14 +482,26 @@
       margin: 14px 0 0;
       .card-content {
         .title {
-          font: normal 16px/22px Roboto;
           margin-bottom: 10px;
           color: $color-black;
+          font: bold 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: bold 16px/22px Roboto;
+          }
+          @include for-size(desktop) {
+            font: bold 16px/22px Roboto;
+          }
         }
         .text {
-          font: normal 16px/22px Roboto;
           margin-bottom: 10px;
           color: #333333;
+          font: normal 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: normal 16px/22px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 16px/22px Roboto;
+          }
           .link {
             color: #7a7a7a;
             font-weight: bold;
@@ -589,6 +607,13 @@
         justify-content: flex-start;
         .button {
           padding: 7.5px 25px;
+          width: 50%;
+          @include for-size(tablet) {
+            width: max-content;
+          }
+          @include for-size(desktop) {
+            width: max-content;
+          }
         }
         .button--grey {
           margin-right: 15px;
