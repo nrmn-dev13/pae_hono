@@ -8,6 +8,17 @@
           border: 1px solid #000;
           box-sizing: border-box;
           border-radius: 8px;
+          padding: 14px 15px;
+          margin-bottom: 15px;
+          min-height: 60px;
+          @include for-size(tablet) {
+            margin-bottom: 30px;
+            min-height: 80px;
+          }
+          @include for-size(desktop) {
+            margin-bottom: 30px;
+            min-height: 80px;
+          }
           .check-wrapper {
             margin: 0;
             .custom-check {
@@ -15,6 +26,25 @@
                 font-size: 14px;
                 line-height: 20px;
               }
+            }
+          }
+          .image-wrapper {
+            margin: 0 0 0 15px;
+            width: 50px;
+            height: 30px;
+            overflow: hidden;
+            @include for-size(tablet) {
+              width: 72px;
+              height: 50px;
+            }
+            @include for-size(desktop) {
+              width: 72px;
+              height: 50px;
+            }
+            img {
+              max-width: 100%;
+              height: auto;
+              object-fit: contain;
             }
           }
         }
