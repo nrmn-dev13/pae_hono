@@ -140,6 +140,7 @@
     .text-helper {
       font: normal 14px/20px Roboto;
       color: $color-black;
+      font-style: italic !important;
       margin-bottom: 30px;
       .fas {
         color: $color-blue;

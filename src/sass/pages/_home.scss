@@ -45,14 +45,14 @@
               margin-right: 0px;
             }
             .card-title {
-              font: normal 14px/20px Roboto;
+              font: bold 14px/20px Roboto;
               margin: 0;
               color: $color-white;
               @include for-size(tablet) {
-                font: normal 16px/22px Roboto;
+                font: bold 16px/22px Roboto;
               }
               @include for-size(desktop) {
-                font: normal 16px/22px Roboto;
+                font: bold 16px/22px Roboto;
               }
             }
             .image-wrapper {

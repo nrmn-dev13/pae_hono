@@ -1,6 +1,15 @@
 .webapp--preparation {
   .section--list {
     .card {
+      position: relative;
+      .link-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
       .card-content {
         .title {
           font: normal 14px/20px Roboto;
