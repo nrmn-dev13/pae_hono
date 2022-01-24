@@ -79,6 +79,10 @@
         color: $color-black;
         font: bold 12px/24px Roboto;
         margin-bottom: 0px;
+        &--highlight {
+          color: $color-blue;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -661,14 +665,24 @@
         }
         .image-wrapper {
           margin-bottom: 0;
-          width: 127px;
-          height: 75px;
+          width: 77px;
+          height: 45px;
           overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
           flex: 0 0 auto;
-          margin-left: 15px;
+          margin-left: 30px;
+          @include for-size(tablet) {
+            width: 127px;
+            height: 75px;
+            margin-left: 15px;
+          }
+          @include for-size(desktop) {
+            width: 127px;
+            height: 75px;
+            margin-left: 15px;
+          }
         }
       }
     }

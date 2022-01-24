@@ -120,6 +120,7 @@
       }
       .card {
         flex-direction: column-reverse;
+        min-height: 169px;
         @include for-size(tablet) {
           flex-direction: row;
         }

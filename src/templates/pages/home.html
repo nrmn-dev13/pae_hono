@@ -67,6 +67,7 @@
               <div class="badge">Day 2</div>
               <h6 class="title">After 48 Hours of Home Isolation</h6>
               <p class="text">If severe symptoms haven’t manifested and you feel like you can continue isolating at home without requiring any medical care</p>
+              <p class="text text--highlight" data-bs-toggle="modal" data-bs-target="#dashboardModal">Click to find what you need to know</p>
             </div>
             <figure class="image-wrapper">
               <img src="assets/img/dashboard/process-two.svg" alt="" class="img img-fluid">
@@ -160,13 +161,4 @@
     </div>
   </div>
 </div>
-<script>
-  var resendEmailModal = new bootstrap.Modal(
-    document.getElementById("dashboardModal"),
-    {}
-  );
-  document.onreadystatechange = function () {
-    resendEmailModal.show();
-  };
-</script>
 {% endblock %}
