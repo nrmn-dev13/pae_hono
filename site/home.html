@@ -184,7 +184,74 @@
     </div>
   </section>
 </main>
-
+<div
+  class="modal modal-dashboard fade"
+  id="dashboardModal"
+  tabindex="-1"
+  aria-labelledby="dashboardModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dashboardModalLabel">
+          What You Need to Know
+        </h5>
+        <button
+          type="button"
+          class="button button--close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="card-title">NZ Public Health Unit or your Health Provider will call you within 48 hours</h4>
+          </div>
+          <figure class="image-wrapper">
+            <img src="assets/img/dashboard/home-pop-one.svg" alt="" class="img img-fluid">
+          </figure>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h4 class="card-title">Will give you a health contact person, schedule of calls from covid-19 health advice 0800 358 5453, self care and medical kit</h4>
+          </div>
+          <figure class="image-wrapper">
+            <img src="assets/img/dashboard/home-pop-two.svg" alt="" class="img img-fluid">
+          </figure>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h4 class="card-title">You can ask for Dr's certificate and insist on an Oximeter</h4>
+          </div>
+          <figure class="image-wrapper">
+            <img src="assets/img/dashboard/home-pop-three.svg" alt="" class="img img-fluid">
+          </figure>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h4 class="card-title"> They will ask for your medical history and contact tracing information</h4>
+          </div>
+          <figure class="image-wrapper">
+            <img src="assets/img/dashboard/home-pop-four.svg" alt="" class="img img-fluid">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var resendEmailModal = new bootstrap.Modal(
+    document.getElementById("dashboardModal"),
+    {}
+  );
+  document.onreadystatechange = function () {
+    resendEmailModal.show();
+  };
+</script>
 
 
 

@@ -574,6 +574,9 @@
     }
   }
   ~ .modal {
+    .modal-dialog {
+      max-width: 626px;
+    }
     .modal-content {
       padding: 15px;
     }
@@ -602,6 +605,12 @@
         color: #333333;
         margin-bottom: 15px;
       }
+      .link {
+        font: normal 16px/22px Roboto;
+        color: $color-blue;
+        margin-bottom: 15px;
+        display: block;
+      }
       .button-wrapper {
         display: flex;
         align-items: center;
@@ -609,15 +618,90 @@
         .button {
           padding: 7.5px 25px;
           width: 50%;
+          font: normal 14px/20px Roboto;
           @include for-size(tablet) {
+            font: normal 16px/22px Roboto;
             width: max-content;
           }
           @include for-size(desktop) {
+            font: normal 16px/22px Roboto;
             width: max-content;
           }
         }
         .button--grey {
           margin-right: 15px;
+        }
+        .button--black {
+          margin-right: 15px;
+        }
+      }
+    }
+    &.modal-dashboard {
+      .modal-body {
+        .card {
+          padding: 15px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .card-title {
+            font: bold 14px/20px Roboto;
+            margin: 0;
+            @include for-size(tablet) {
+              font: bold 16px/22px Roboto;
+            }
+            @include for-size(desktop) {
+              font: bold 16px/22px Roboto;
+            }
+          }
+        }
+        .image-wrapper {
+          margin-bottom: 0;
+          width: 127px;
+          height: 75px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 auto;
+          margin-left: 15px;
+        }
+      }
+    }
+    &.modal-covid {
+      .modal-body {
+        .card {
+          border: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          border-radius: 6px;
+          padding: 15px;
+          margin-bottom: 15px;
+          .title {
+            color: $color-black;
+            font: bold 16px/22px Roboto;
+            margin-bottom: 17px;
+          }
+          .card-item {
+            margin-bottom: 13px;
+            font: normal 14px/20px Roboto;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .fas {
+              color: #a3a3a3;
+              margin-right: 11px;
+            }
+          }
+          .action {
+            .icon {
+              cursor: pointer;
+              color: $color-red;
+            }
+          }
         }
       }
     }

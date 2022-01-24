@@ -10,6 +10,11 @@
           @include for-size(desktop) {
             font: bold 16px/22px Roboto;
           }
+          .highlight {
+            color: $color-blue;
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
       .image-wrapper {
