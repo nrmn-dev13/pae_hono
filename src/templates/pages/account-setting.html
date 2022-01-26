@@ -53,7 +53,7 @@
                   </p>
                   <p class="text">
                     Don’t see a confirmation email?
-                    <a href="" class="link">Resend email confirmation</a>
+                    <a href="javascript:void(0)" class="link" data-bs-toggle="modal" data-bs-target="#resendModal">Resend email confirmation</a>
                   </p>
                 </div>
               </div>
@@ -155,13 +155,4 @@
     </div>
   </div>
 </div>
-<script>
-  var resendEmailModal = new bootstrap.Modal(
-    document.getElementById("resendModal"),
-    {}
-  );
-  document.onreadystatechange = function () {
-    resendEmailModal.show();
-  };
-</script>
 {% endblock %}
