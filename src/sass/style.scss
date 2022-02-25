@@ -1,10 +1,8 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import "abstracts/variables",
-"abstracts/functions",
-"abstracts/mixins",
-"abstracts/_placeholders";
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
+  "abstracts/_placeholders";
 
 // 2. Vendors
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -19,7 +17,8 @@
 @import "components/button", "components/header";
 
 // 6. Page-specific styles
-@import "pages/onboarding", "pages/auth", "pages/home", "pages/preparation", "pages/whare", "pages/suplement", "pages/test-covid";
+@import "pages/onboarding", "pages/auth", "pages/home", "pages/preparation",
+  "pages/whare", "pages/suplement", "pages/test-covid", "pages/_monitoring";
 
 // 7. Themes
 @import "themes/default";

@@ -1,0 +1,133 @@
+.webapp--monitoring {
+  .section--list {
+    .card {
+      position: relative;
+      .link-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+      .card-content {
+        .title {
+          font: normal 14px/20px Roboto;
+          @include for-size(tablet) {
+            font: normal 20px/28px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 20px/28px Roboto;
+          }
+        }
+        .link {
+          font: normal 12px/17px Roboto;
+          @include for-size(tablet) {
+            font: normal 14px/20px Roboto;
+          }
+          @include for-size(desktop) {
+            font: normal 14px/20px Roboto;
+          }
+        }
+      }
+      .image-wrapper {
+        width: 75px;
+        height: 45px;
+        @include for-size(tablet) {
+          width: 170px;
+          height: 100px;
+        }
+        @include for-size(desktop) {
+          width: 170px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  .section--monitoring {
+    .card {
+      display: flex;
+      flex-direction: column;
+
+      &.card--gray {
+        border: 1px solid #333333;
+        color: #333333;
+      }
+      &.card--yellow {
+        border: 1px solid $color-dark-yellow;
+        color: $color-dark-yellow;
+      }
+      &.card--blue {
+        border: 1px solid $color-blue;
+        color: $color-blue;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Roboto;
+        @include for-size(tablet) {
+          font-family: Roboto;
+          font-size: 18px;
+        }
+        @include for-size(desktop) {
+          font-size: 18px;
+
+          font-family: Roboto;
+        }
+      }
+
+      .card-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .card-action {
+        cursor: pointer;
+        align-self: center;
+        color: $color-black;
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .card-divider {
+          color: #333333;
+        }
+
+        .card-item {
+          border: 1px solid #c4c4c4;
+          padding: 5px;
+          border-radius: 5px;
+          text-align: center;
+          font-size: 13px;
+          margin: 3px;
+          width: 100%;
+        }
+      }
+    }
+
+    .subheading {
+      font-size: 14px;
+      color: $color-blue;
+      margin-left: 2.8rem;
+    }
+  }
+
+  .panel-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .error {
+    font-family: roboto;
+    color: $color-blue;
+    h4 {
+      font-weight: bold;
+    }
+  }
+}

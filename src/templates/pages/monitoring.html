@@ -1,0 +1,64 @@
+<!-- index.html -->
+{% extends "layout.html" %} {% block content %}
+
+<header class="header">{% include "partials/navigation.html" %}</header>
+<main class="webapp webapp--monitoring">
+  <section class="section section--list">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="home.html" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Monitor whānau health
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <a href="monitoring-oximeter.html" class="link-overlay"></a>
+            <div class="card-content">
+              <h6 class="title">Monitoring with Oximeter</h6>
+              <a href="monitoring-oximeter.html" class="link">
+                See detail
+                <div class="icon-wrapper">
+                  <i class="icon icon--detail fas fa-chevron-right"></i>
+                </div>
+              </a>
+            </div>
+            <figure class="image-wrapper">
+              <img
+                src="assets/img/monitoring/icon-oximeter.svg"
+                alt=""
+                class="img img-fluid"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card">
+            <a href="monitoring-symptoms.html" class="link-overlay"></a>
+            <div class="card-content">
+              <h6 class="title">Monitoring based on Symptoms</h6>
+              <a href="monitoring-symptoms.html" class="link">
+                See detail
+                <div class="icon-wrapper">
+                  <i class="icon icon--detail fas fa-chevron-right"></i>
+                </div>
+              </a>
+            </div>
+            <figure class="image-wrapper">
+              <img
+                src="assets/img/monitoring/icon-symptoms.svg"
+                alt=""
+                class="img img-fluid"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
