@@ -63,6 +63,10 @@
         color: $color-blue;
       }
 
+      .text-black {
+        color: $color-black;
+      }
+
       .title {
         font-weight: bold;
         font-size: 16px;
@@ -107,6 +111,30 @@
           font-size: 13px;
           margin: 3px;
           width: 100%;
+        }
+
+        ul {
+          list-style-type: circle;
+          font-weight: bold;
+          margin-left: 15px;
+        }
+
+        .badge {
+          border-radius: 10px;
+          background: $color-white;
+          font-family: Roboto;
+          font-size: 15px;
+
+          &.badge--red {
+            border: 1px solid $color-red;
+            color: $color-red;
+            padding: 5px;
+          }
+
+          &.badge--green {
+            color: $color-green;
+            padding: 0;
+          }
         }
       }
     }
