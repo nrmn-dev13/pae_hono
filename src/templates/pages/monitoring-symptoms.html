@@ -1,0 +1,232 @@
+<!-- index.html -->
+{% extends "layout.html" %} {% block content %}
+
+<header class="header">{% include "partials/navigation.html" %}</header>
+<main class="webapp webapp--monitoring">
+  <section class="section section--monitoring">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="monitoring.html" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Monitoring without Oximeter
+        </a>
+      </div>
+
+      <div class="panel-wrapper">
+        <div class="col-lg-4">
+          <input type="date" class="form-control" value="2022-01-26" disabled />
+        </div>
+        <div>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#addDataModal"
+            class="button button--grey button- single--button px-5"
+          >
+            Add Data
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-4 mb-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="error mt-5" align="center">
+        <img
+          src="assets/img/monitoring/icon-no-data.svg"
+          alt=""
+          class="img img-fluid"
+        />
+        <h4>Sorry, no data available yet</h4>
+        <p>Please enter your symptoms from take add button</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div
+    class="modal modal-monitoring fade"
+    id="addDataModal"
+    tabindex="-1"
+    aria-labelledby="addDataModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title bold">Add data based on symptoms</h6>
+          <button
+            type="button"
+            class="button button--close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form">
+            <div class="inner-wrapper">
+              <div class="row mb-0">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                  <label class="form-label">Select Date</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                  <label class="form-label">Enter checking time</label>
+                  <input type="time" class="form-control" />
+                </div>
+              </div>
+
+              <div class="row">
+                <p>Do you feel any symptoms?</p>
+
+                <div class="mt-2 mb-1 bold">
+                  <label for="no-symptoms">
+                    <input type="checkbox" id="no-symptoms" />
+                    Normal condition, no symptoms
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="bluish" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="bluish" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/bluish.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Bluish Colouring</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="breathlessness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="breathlessness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img
+                        src="assets/img/monitoring/breathlessness.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Breathlessness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="tightness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="tightness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/tightness.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Tightness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="cough" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="cough" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/cough.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Cough</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="restlessness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="restlessness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img
+                        src="assets/img/monitoring/restlessness.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Restlessness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="fast-pulse" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="fast-pulse" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/fast-pulse.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Fast Pulse Rate</p>
+                    </div>
+                  </label>
+                </div>
+                <p>Did your symptoms suddenly get worse?</p>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+                  <label for="symptoms-radio" class="check-custom">
+                    <div>
+                      <input
+                        type="radio"
+                        id="symptoms-radio"
+                        value="yes"
+                        name="symptoms"
+                      />
+                    </div>
+                    <div class="check-label">
+                      <p class="text ml-3">Yes, very bad</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <label for="symptoms-radio-no" class="check-custom">
+                    <div>
+                      <input
+                        type="radio"
+                        id="symptoms-radio-no"
+                        value="no"
+                        name="symptoms"
+                      />
+                    </div>
+                    <div class="check-label">
+                      <p class="text ml-3">No, still tolerable</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="panel-wrapper">
+              <button class="button button--black w-100 m-1">Save</button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="button button--black-outline button--has-icon w-100 m-1"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

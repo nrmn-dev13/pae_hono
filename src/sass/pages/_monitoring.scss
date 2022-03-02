@@ -130,4 +130,58 @@
       font-weight: bold;
     }
   }
+
+  .modal-monitoring {
+    .card {
+      cursor: pointer;
+      border: 1px solid $color-black;
+      box-sizing: border-box;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      min-height: 60px;
+      @include for-size(tablet) {
+        margin-bottom: 30px;
+        min-height: 80px;
+      }
+      @include for-size(desktop) {
+        margin-bottom: 30px;
+        min-height: 80px;
+      }
+
+      @include for-size(phone-xs) {
+        margin-bottom: 30px;
+        min-height: 80px;
+      }
+
+      &.check-wrapper {
+        display: flex;
+        flex-direction: column;
+        .custom-check {
+          align-self: flex-end;
+        }
+      }
+
+      .check-label {
+        .text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .check-custom {
+      border: 1px solid $color-black;
+      border-radius: 8px;
+      display: flex;
+      min-height: 30px;
+      padding: 15px;
+      .check-label {
+        .text {
+          margin-left: 5px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
 }

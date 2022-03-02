@@ -1,0 +1,320 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> 
+<![endif]-->
+<!--[if IE 7]>         
+<html class="no-js lt-ie9 lt-ie8" lang=""> 
+<![endif]-->
+<!--[if IE 8]>         
+<html class="no-js lt-ie9" lang=""> 
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">		
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">		
+	<link href="./assets/css/jquery-steps.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="./assets/css/style.min.css" rel="stylesheet">
+
+	<script src="./assets/js/vendor/jquery.min.js"></script>	
+	<script src="./assets/js/vendor/jquery-steps.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script defer src="./assets/js/main.js"></script>
+	<!-- <script src="./assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	
+
+<header class="header"><nav class="navbar navbar-light">
+  <div class="container">
+    <a href="home.html" class="btn btn-primary">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="navbar-brand" href="home.html">
+      <img src="assets/img/logo.png" alt="" class="img img-fluid" />
+    </a>
+    <div class="dropdown dropdown--nav">
+      <button
+        type="button"
+        class="btn dropdown-toggle"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-expanded="false"
+      >
+        <i class="fas fa-user-circle"></i>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+					<div class="dropdown-header">
+						<h6 class="dropdown-title">Masrama</h6>
+						<address>masramadtcm@gmail.com</address>
+					</div>
+				</li>
+        <li><a class="dropdown-item" href="account-setting.html">
+					<i class="icon icon--dropdown fas fa-lock"></i> Account Setting
+				</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item dropdown-item--logout" href="#">
+					<i class="icon icon--dropdown fas fa-sign-out-alt"></i> Logout
+				</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main class="webapp webapp--monitoring">
+  <section class="section section--monitoring">
+    <div class="container">
+      <div class="navigation-back">
+        <a href="monitoring.html" class="action-wrapper">
+          <div class="icon-wrapper">
+            <i class="icon icon--back fas fa-arrow-left"></i>
+          </div>
+          Monitoring without Oximeter
+        </a>
+      </div>
+
+      <div class="panel-wrapper">
+        <div class="col-lg-4">
+          <input type="date" class="form-control" value="2022-01-26" disabled />
+        </div>
+        <div>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#addDataModal"
+            class="button button--grey button- single--button px-5"
+          >
+            Add Data
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-4 mb-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="error mt-5" align="center">
+        <img
+          src="assets/img/monitoring/icon-no-data.svg"
+          alt=""
+          class="img img-fluid"
+        />
+        <h4>Sorry, no data available yet</h4>
+        <p>Please enter your symptoms from take add button</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div
+    class="modal modal-monitoring fade"
+    id="addDataModal"
+    tabindex="-1"
+    aria-labelledby="addDataModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title bold">Add data based on symptoms</h6>
+          <button
+            type="button"
+            class="button button--close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form">
+            <div class="inner-wrapper">
+              <div class="row mb-0">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                  <label class="form-label">Select Date</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                  <label class="form-label">Enter checking time</label>
+                  <input type="time" class="form-control" />
+                </div>
+              </div>
+
+              <div class="row">
+                <p>Do you feel any symptoms?</p>
+
+                <div class="mt-2 mb-1 bold">
+                  <label for="no-symptoms">
+                    <input type="checkbox" id="no-symptoms" />
+                    Normal condition, no symptoms
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="bluish" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="bluish" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/bluish.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Bluish Colouring</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="breathlessness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="breathlessness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img
+                        src="assets/img/monitoring/breathlessness.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Breathlessness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="tightness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="tightness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/tightness.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Tightness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="cough" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="cough" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/cough.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Cough</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="restlessness" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="restlessness" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img
+                        src="assets/img/monitoring/restlessness.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Restlessness</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                  <label for="fast-pulse" class="card check-wrapper">
+                    <div class="custom-check">
+                      <input type="checkbox" id="fast-pulse" />
+                    </div>
+                    <figure class="image-wrapper">
+                      <img src="assets/img/monitoring/fast-pulse.svg" alt="" />
+                    </figure>
+                    <div class="check-label">
+                      <p class="text">Fast Pulse Rate</p>
+                    </div>
+                  </label>
+                </div>
+                <p>Did your symptoms suddenly get worse?</p>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+                  <label for="symptoms-radio" class="check-custom">
+                    <div>
+                      <input
+                        type="radio"
+                        id="symptoms-radio"
+                        value="yes"
+                        name="symptoms"
+                      />
+                    </div>
+                    <div class="check-label">
+                      <p class="text ml-3">Yes, very bad</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <label for="symptoms-radio-no" class="check-custom">
+                    <div>
+                      <input
+                        type="radio"
+                        id="symptoms-radio-no"
+                        value="no"
+                        name="symptoms"
+                      />
+                    </div>
+                    <div class="check-label">
+                      <p class="text ml-3">No, still tolerable</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="panel-wrapper">
+              <button class="button button--black w-100 m-1">Save</button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="button button--black-outline button--has-icon w-100 m-1"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+</body>
+
+</html>
