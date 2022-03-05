@@ -92,14 +92,60 @@ $(document).ready(function () {
   handleSlider();
 
   
-  $('.swiper').slick({
-    // dots: true,
-    // centerMode: true,
-    arrows: false,
-    centerPadding: '1em',
-    infinite: false,
-    lazyLoad: 'ondemand',
-    slidesToShow: 2,
-    slidesToScroll: 1,
-  });
+  
+  window.addEventListener("resize", createOffsets);
+  
+  function createOffsets() {
+    const swiper = $(".swiper-custom")
+    const card = $(".card-custom")
+    const mqLarge = window.matchMedia("(min-width: 768px) and (max-width: 1024px)");
+    
+    if (swiper && mqLarge.matches) {
+      $('.swiper').slick({
+        arrows: false,
+        centerPadding: '1em',
+        infinite: false,
+        lazyLoad: 'ondemand',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 760,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 360,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+      swiper.addClass('swiper')
+      card.addClass('m-1')
+    } else {
+      $('.swiper').destroy(true, true)
+      swiper.removeClass('swiper')
+      card.removeClass('m-1')
+    }
+  
+  }
 });

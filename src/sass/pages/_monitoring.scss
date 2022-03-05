@@ -143,6 +143,9 @@
       font-size: 14px;
       color: $color-blue;
       margin-left: 2.8rem;
+      @include for-size(phone-xs) {
+        margin: auto;
+      }
 
       a {
         color: $color-blue;
