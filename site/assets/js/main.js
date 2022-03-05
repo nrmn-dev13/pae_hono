@@ -90,4 +90,16 @@ $(document).ready(function () {
   handleCheckall();
   handleCloseAlert();
   handleSlider();
+
+  
+  $('.swiper').slick({
+    // dots: true,
+    // centerMode: true,
+    arrows: false,
+    centerPadding: '1em',
+    infinite: false,
+    lazyLoad: 'ondemand',
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  });
 });
