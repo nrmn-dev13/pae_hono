@@ -143,12 +143,45 @@
       font-size: 14px;
       color: $color-blue;
       margin-left: 2.8rem;
+
+      a {
+        color: $color-blue;
+        text-decoration: underline;
+      }
     }
   }
 
   .panel-wrapper {
     display: flex;
     justify-content: space-between;
+
+    .action-icon {
+      display: none;
+    }
+
+    .action-text {
+      display: block;
+    }
+
+    @include for-size(phone-xs) {
+      .action-icon {
+        display: block;
+      }
+
+      .action-text {
+        display: none;
+      }
+    }
+
+    @include for-size(phone-sm) {
+      .action-icon {
+        display: block;
+      }
+
+      .action-text {
+        display: none;
+      }
+    }
   }
 
   .error {
