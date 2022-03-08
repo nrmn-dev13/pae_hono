@@ -154,9 +154,18 @@
     }
   }
 
+  .form {
+    min-height: auto;
+  }
+
+  .inner-wrapper {
+    padding: 0;
+  }
+
   .panel-wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 0 -4px;
 
     .action-icon {
       display: none;
@@ -246,6 +255,11 @@
           line-height: 20px;
         }
       }
+    }
+
+    .required:after {
+      content: " *";
+      color: $color-red;
     }
   }
 }
