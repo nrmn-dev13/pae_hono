@@ -114,13 +114,13 @@
         }
 
         ul {
-          list-style-type: circle;
+          list-style-type: disc;
           font-weight: bold;
-          margin-left: 15px;
+          margin-left: 20px;
         }
 
         .badge {
-          border-radius: 10px;
+          border-radius: 100px;
           background: $color-white;
           font-family: Roboto;
           font-size: 15px;
@@ -128,7 +128,7 @@
           &.badge--red {
             border: 1px solid $color-red;
             color: $color-red;
-            padding: 5px;
+            padding: 5px 10px !important;
           }
 
           &.badge--green {
@@ -165,7 +165,6 @@
   .panel-wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 -4px;
 
     .action-icon {
       display: none;
@@ -194,6 +193,12 @@
         display: none;
       }
     }
+  }
+
+  .panel-wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -4px;
   }
 
   .error {

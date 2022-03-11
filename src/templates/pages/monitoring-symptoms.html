@@ -15,8 +15,8 @@
       </div>
 
       <div class="panel-wrapper">
-        <div class="col-lg-4 col-xs-2">
-          <input type="date" class="form-control" value="2022-01-26" disabled />
+        <div class="col-lg-4 col-xs-2 col-md-8">
+          <input type="date" class="form-control date-monitoring" />
         </div>
         <div>
           <button
@@ -35,7 +35,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
           <div class="card card--blue">
             <div class="card-wrapper w-100">
               <h4 class="title">Morning</h4>
@@ -51,18 +51,16 @@
               <hr class="card-divider" />
               <p>Actions</p>
               <p class="bold">You are doing well</p>
-              <p>Symptoms are not bad</p>
-              <div class="row">
-                <div class="container">
-                  <div class="badge badge--green">
-                    Normal condition, no symptoms
-                  </div>
+              <p class="mt-2">Symptoms are not bad</p>
+              <div>
+                <div class="badge badge--green">
+                  Normal condition, no symptoms
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
           <div class="card card--yellow">
             <div class="card-wrapper w-100">
               <h4 class="title">Afternoon</h4>
@@ -80,18 +78,16 @@
               <p class="bold">
                 Contact your health provider for further examination
               </p>
-              <p>Symptoms are not bad</p>
-              <div class="row">
-                <div class="container">
-                  <div class="badge badge--red">Bluish Colouring</div>
-                  <div class="badge badge--red">Tightness</div>
-                  <div class="badge badge--red">Breathlessness</div>
-                </div>
+              <p class="mt-2">Symptoms are not bad</p>
+              <div>
+                <div class="badge badge--red">Bluish Colouring</div>
+                <div class="badge badge--red">Tightness</div>
+                <div class="badge badge--red">Breathlessness</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
           <div class="card card--gray">
             <div class="card-wrapper w-100">
               <h4 class="title">Night</h4>
@@ -110,13 +106,11 @@
                 <li>Call 111 for an ambulance</li>
                 <li>Contact your health provider for further examination</li>
               </ul>
-              <p>Symptoms are not bad</p>
-              <div class="row">
-                <div class="container">
-                  <div class="badge badge--red">Bluish Colouring</div>
-                  <div class="badge badge--red">Tightness</div>
-                  <div class="badge badge--red">Breathlessness</div>
-                </div>
+              <p class="mt-2">Symptoms are not bad</p>
+              <div>
+                <div class="badge badge--red">Bluish Colouring</div>
+                <div class="badge badge--red">Tightness</div>
+                <div class="badge badge--red">Breathlessness</div>
               </div>
             </div>
           </div>
@@ -250,6 +244,9 @@
                         alt=""
                       />
                     </figure>
+                    <div class="box">
+                      <i class="icon icon--check fas fa-check"></i>
+                    </div>
                     <div class="check-label">
                       <p class="text">Restlessness</p>
                     </div>
@@ -304,8 +301,8 @@
                 </div>
               </div>
             </div>
-            <div class="panel-wrapper">
-              <button class="button button--black w-100 m-1">Save</button>
+            <div class="panel-wrapper-footer">
+              <button class="button button--black w-100 m-1">Update</button>
               <button
                 type="button"
                 data-bs-dismiss="modal"
@@ -366,9 +363,9 @@
 
               <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="bluish" class="card check-wrapper">
+                  <label for="add-bluish" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="bluish" />
+                      <input type="checkbox" id="add-bluish" />
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/bluish.svg" alt="" />
@@ -379,9 +376,9 @@
                   </label>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="breathlessness" class="card check-wrapper">
+                  <label for="add-breathlessness" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="breathlessness" />
+                      <input type="checkbox" id="add-breathlessness" />
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -395,9 +392,9 @@
                   </label>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="tightness" class="card check-wrapper">
+                  <label for="add-tightness" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="tightness" />
+                      <input type="checkbox" id="add-tightness" />
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/tightness.svg" alt="" />
@@ -408,9 +405,9 @@
                   </label>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="cough" class="card check-wrapper">
+                  <label for="add-cough" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="cough" />
+                      <input type="checkbox" id="add-cough" />
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/cough.svg" alt="" />
@@ -421,9 +418,9 @@
                   </label>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="restlessness" class="card check-wrapper">
+                  <label for="add-restlessness" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="restlessness" />
+                      <input type="checkbox" id="add-restlessness" />
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -437,9 +434,9 @@
                   </label>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="fast-pulse" class="card check-wrapper">
+                  <label for="add-fast-pulse" class="card check-wrapper">
                     <div class="custom-check">
-                      <input type="checkbox" id="fast-pulse" />
+                      <input type="checkbox" id="add-fast-pulse" />
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/fast-pulse.svg" alt="" />
@@ -454,11 +451,11 @@
 
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
-                  <label for="symptoms-radio" class="check-custom">
+                  <label for="add-symptoms-radio" class="check-custom">
                     <div>
                       <input
                         type="radio"
-                        id="symptoms-radio"
+                        id="add-symptoms-radio"
                         value="yes"
                         name="symptoms"
                       />
@@ -469,11 +466,11 @@
                   </label>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                  <label for="symptoms-radio-no" class="check-custom">
+                  <label for="add-symptoms-radio-no" class="check-custom">
                     <div>
                       <input
                         type="radio"
-                        id="symptoms-radio-no"
+                        id="add-symptoms-radio-no"
                         value="no"
                         name="symptoms"
                       />
@@ -485,7 +482,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel-wrapper">
+            <div class="panel-wrapper-footer">
               <button class="button button--black w-100 m-1">Save</button>
               <button
                 type="button"
