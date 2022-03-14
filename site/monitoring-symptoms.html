@@ -243,11 +243,11 @@
               <div class="row mb-0">
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
                   <label class="form-label">Select Date</label>
-                  <input type="date" class="form-control" />
+                  <input type="date" class="form-control date-monitoring" />
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
                   <label class="form-label">Enter checking time</label>
-                  <input type="time" class="form-control" />
+                  <input type="time" class="form-control time-monitoring" />
                 </div>
               </div>
 
@@ -256,7 +256,11 @@
 
                 <div class="mt-2 mb-1 bold">
                   <label for="no-symptoms">
-                    <input type="checkbox" id="no-symptoms" />
+                    <input
+                      type="checkbox"
+                      id="no-symptoms"
+                      class="no-symptoms"
+                    />
                     Normal condition, no symptoms
                   </label>
                 </div>
@@ -264,9 +268,16 @@
 
               <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                  <label for="bluish" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="bluish" />
+                  <label for="bluish" class="card check-wrapper card-disabled">
+                    <input
+                      type="checkbox"
+                      id="bluish"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/bluish.svg" alt="" />
@@ -278,8 +289,15 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="breathlessness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="breathlessness" />
+                    <input
+                      type="checkbox"
+                      id="breathlessness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -294,8 +312,15 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="tightness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="tightness" />
+                    <input
+                      type="checkbox"
+                      id="tightness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/tightness.svg" alt="" />
@@ -307,8 +332,15 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="cough" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="cough" />
+                    <input
+                      type="checkbox"
+                      id="cough"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/cough.svg" alt="" />
@@ -320,8 +352,15 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="restlessness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="restlessness" />
+                    <input
+                      type="checkbox"
+                      id="restlessness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -329,9 +368,6 @@
                         alt=""
                       />
                     </figure>
-                    <div class="box">
-                      <i class="icon icon--check fas fa-check"></i>
-                    </div>
                     <div class="check-label">
                       <p class="text">Restlessness</p>
                     </div>
@@ -339,8 +375,15 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="fast-pulse" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="fast-pulse" />
+                    <input
+                      type="checkbox"
+                      id="fast-pulse"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/fast-pulse.svg" alt="" />
@@ -427,11 +470,11 @@
               <div class="row mb-0">
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
                   <label class="form-label">Select Date</label>
-                  <input type="date" class="form-control" />
+                  <input type="date" class="form-control date-monitoring" />
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
                   <label class="form-label">Enter checking time</label>
-                  <input type="time" class="form-control" />
+                  <input type="time" class="form-control time-monitoring" />
                 </div>
               </div>
 
@@ -439,18 +482,29 @@
                 <p>Do you feel any symptoms?</p>
 
                 <div class="mt-2 mb-1 bold">
-                  <label for="no-symptoms">
-                    <input type="checkbox" id="no-symptoms" />
+                  <label for="add-no-symptoms">
+                    <input
+                      type="checkbox"
+                      id="add-no-symptoms"
+                      class="no-symptoms"
+                    />
                     Normal condition, no symptoms
                   </label>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-bluish" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-bluish" />
+                    <input
+                      type="checkbox"
+                      id="add-bluish"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/bluish.svg" alt="" />
@@ -460,10 +514,17 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-breathlessness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-breathlessness" />
+                    <input
+                      type="checkbox"
+                      id="add-breathlessness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -476,10 +537,17 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-tightness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-tightness" />
+                    <input
+                      type="checkbox"
+                      id="add-tightness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/tightness.svg" alt="" />
@@ -489,10 +557,17 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-cough" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-cough" />
+                    <input
+                      type="checkbox"
+                      id="add-cough"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/cough.svg" alt="" />
@@ -502,10 +577,17 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-restlessness" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-restlessness" />
+                    <input
+                      type="checkbox"
+                      id="add-restlessness"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img
@@ -518,10 +600,17 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="card-symptoms col-xs-6 col-sm-6 col-md-6 col-lg-4">
                   <label for="add-fast-pulse" class="card check-wrapper">
-                    <div class="custom-check">
-                      <input type="checkbox" id="add-fast-pulse" />
+                    <input
+                      type="checkbox"
+                      id="add-fast-pulse"
+                      class="form-control form-control--check"
+                    />
+                    <div class="custom-check card-content">
+                      <div class="box">
+                        <i class="icon icon--check fas fa-check"></i>
+                      </div>
                     </div>
                     <figure class="image-wrapper">
                       <img src="assets/img/monitoring/fast-pulse.svg" alt="" />
@@ -535,33 +624,31 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
-                  <label for="add-symptoms-radio" class="check-custom">
-                    <div>
-                      <input
-                        type="radio"
-                        id="add-symptoms-radio"
-                        value="yes"
-                        name="symptoms"
-                      />
-                    </div>
-                    <div class="check-label">
-                      <p class="text ml-3">Yes, very bad</p>
+                <div class="container inline-field">
+                  <label for="radioOne" class="check-wrapper">
+                    <input
+                      type="radio"
+                      name="radioSectionThree"
+                      id="radioOne"
+                      class="form-control form-control--check"
+                      value="yes"
+                    />
+                    <div class="custom-check radio-monitoring">
+                      <i class="icon icon--check"></i>
+                      <p class="text">Yes, very bad</p>
                     </div>
                   </label>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                  <label for="add-symptoms-radio-no" class="check-custom">
-                    <div>
-                      <input
-                        type="radio"
-                        id="add-symptoms-radio-no"
-                        value="no"
-                        name="symptoms"
-                      />
-                    </div>
-                    <div class="check-label">
-                      <p class="text ml-3">No, still tolerable</p>
+                  <label for="radioTwo" class="check-wrapper">
+                    <input
+                      type="radio"
+                      name="radioSectionThree"
+                      id="radioTwo"
+                      class="form-control form-control--check"
+                      value="no"
+                    />
+                    <div class="custom-check radio-monitoring">
+                      <i class="icon icon--check"></i>
+                      <p class="text">No, still tolerable</p>
                     </div>
                   </label>
                 </div>

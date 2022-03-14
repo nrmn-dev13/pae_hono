@@ -68,7 +68,7 @@ $(document).ready(function () {
     });
   }
   function handleSlider() {
-    $('.slider--dashboard').slick({
+    $(".slider--dashboard").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
@@ -78,10 +78,10 @@ $(document).ready(function () {
       infinite: false,
       responsive: [
         {
-           breakpoint: 768,
-           settings: "unslick"
-        }
-     ]
+          breakpoint: 768,
+          settings: "unslick",
+        },
+      ],
     });
   }
   handleGuideStep();
@@ -92,18 +92,20 @@ $(document).ready(function () {
   handleSlider();
 
   window.addEventListener("resize", createOffsets);
-  
+
   function createOffsets() {
-    const swiper = $(".swiper-custom")
-    const card = $(".card-custom")
-    const mqLarge = window.matchMedia("(min-width: 768px) and (max-width: 1024px)");
-    
+    const swiper = $(".swiper-custom");
+    const card = $(".card-custom");
+    const mqLarge = window.matchMedia(
+      "(min-width: 768px) and (max-width: 1024px)"
+    );
+
     if (swiper && mqLarge.matches) {
-      $('.swiper').slick({
+      $(".swiper").slick({
         arrows: false,
-        centerPadding: '1em',
+        centerPadding: "1em",
         infinite: false,
-        lazyLoad: 'ondemand',
+        lazyLoad: "ondemand",
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [
@@ -112,55 +114,77 @@ $(document).ready(function () {
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
-            }
+            },
           },
           {
             breakpoint: 760,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2
-            }
+              slidesToScroll: 2,
+            },
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
-            }
+              slidesToScroll: 1,
+            },
           },
           {
             breakpoint: 360,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+              slidesToScroll: 1,
+            },
+          },
+        ],
       });
-      swiper.addClass('swiper')
-      card.addClass('m-1')
+      swiper.addClass("swiper");
+      card.addClass("m-1");
     } else {
-      $('.swiper').destroy(true, true)
-      swiper.removeClass('swiper')
-      card.removeClass('m-1')
+      $(".swiper").destroy(true, true);
+      swiper.removeClass("swiper");
+      card.removeClass("m-1");
     }
-  
+  }
+
+  function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
   }
 
   let today = new Date();
+  let time = new Date();
   let dd = today.getDate();
-  let mm = today.getMonth()+1; 
+  let mm = today.getMonth() + 1;
   const yyyy = today.getFullYear();
+  const hh = addZero(today.getHours());
+  const minutes = today.getMinutes();
 
   if (dd < 10) {
-      dd = '0' + dd
-  } 
+    dd = "0" + dd;
+  }
 
   if (mm < 10) {
-      mm = '0' + mm
-  } 
+    mm = "0" + mm;
+  }
 
-  today = yyyy + '-' + mm + '-' + dd;
-  $('.date-monitoring').val(today)
+  today = yyyy + "-" + mm + "-" + dd;
+  time = `${hh}:${minutes}`;
+  $(".date-monitoring").val(today);
+  $(".time-monitoring").val(time);
 
+  $(".no-symptoms").click(() => {
+    $(this).find(".check-wrapper").toggleClass("card-disabled");
+    $(this)
+      .find(".form-control--check")
+      .attr(
+        "disabled",
+        $(this).find(".form-control--check").attr("disabled") === "disabled"
+          ? false
+          : true
+      );
+  });
 });

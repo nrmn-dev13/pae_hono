@@ -210,6 +210,21 @@
   }
 
   .modal-monitoring {
+    .modal-dialog {
+      max-width: 80% !important;
+      @include for-size(phone-xs) {
+        max-width: 100% !important;
+      }
+    }
+
+    .card-symptoms {
+      @include for-size(phone-xs) {
+        float: left !important;
+        width: 150px;
+        margin-right: 10px;
+      }
+    }
+
     .card {
       cursor: pointer;
       border: 1px solid $color-black;
@@ -229,14 +244,7 @@
       @include for-size(phone-xs) {
         margin-bottom: 30px;
         min-height: 80px;
-      }
-
-      &.check-wrapper {
-        display: flex;
-        flex-direction: column;
-        .custom-check {
-          align-self: flex-end;
-        }
+        width: 150px;
       }
 
       .check-label {
@@ -247,17 +255,82 @@
       }
     }
 
-    .check-custom {
-      border: 1px solid $color-black;
-      border-radius: 8px;
+    .card-disabled {
+      background: $bg-gray;
+    }
+
+    .check-wrapper {
       display: flex;
-      min-height: 30px;
-      padding: 15px;
-      .check-label {
-        .text {
-          margin-left: 5px;
-          font-size: 14px;
-          line-height: 20px;
+      flex-direction: column;
+      .custom-check {
+        align-self: flex-end;
+        margin-right: -10px;
+      }
+    }
+
+    .inline-field {
+      display: flex !important;
+      @include for-size(phone-xs) {
+        flex-direction: column;
+        justify-content: center !important;
+      }
+      justify-content: space-between !important;
+      margin-left: -11px;
+
+      .check-wrapper {
+        cursor: pointer;
+        margin: 4px;
+        .form-control--check {
+          display: none;
+          &:checked {
+            ~ .custom-check {
+              border: 1px solid $color-blue;
+              .icon--check {
+                border: 6px solid $color-blue;
+              }
+              .text {
+                color: $color-blue;
+              }
+            }
+          }
+        }
+        .custom-check {
+          min-height: 30px;
+          padding: 15px;
+          display: flex;
+          border: 1px solid $color-black;
+          margin: 0;
+
+          .icon--check {
+            display: flex;
+            flex: 0 0 auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 1px solid $color-black;
+          }
+          .text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140.62%;
+            margin: 0;
+            color: $color-black;
+            @include for-size(tablet) {
+              font-size: 16px;
+            }
+            @include for-size(desktop) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .radio-monitoring {
+          width: 228px;
+          @include for-size(phone-xs) {
+            width: 100%;
+          }
         }
       }
     }
