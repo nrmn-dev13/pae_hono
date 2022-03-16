@@ -111,6 +111,11 @@
           font-size: 13px;
           margin: 3px;
           width: 100%;
+
+          .cart-item-value {
+            font-weight: bold;
+            font-size: 16px;
+          }
         }
 
         ul {
@@ -338,6 +343,66 @@
     .required:after {
       content: " *";
       color: $color-red;
+    }
+  }
+
+  .chart-monitoring {
+    background: $color-white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    .chart-title {
+      padding: 20px 0 10px 20px;
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 15px;
+      h4 {
+        font-weight: bold;
+      }
+    }
+
+    .chart-content {
+      padding: 15px;
+    }
+
+    .chart-content {
+      padding: 15px;
+    }
+
+    .chart-footer {
+      display: flex;
+      justify-content: center;
+      background-color: $color-grey;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      .chart-badge {
+        margin: 10px;
+        display: flex;
+
+        .chart-label {
+          background-color: $color-grey;
+          padding: 7px 10px;
+          margin: 10px 5px;
+          align-self: flex-start;
+
+          &.chart-label--yellow {
+            background-color: rgba(255, 206, 86, 0.2);
+          }
+          &.chart-label--red {
+            background-color: rgba(255, 99, 132, 1);
+          }
+          &.chart-label--green {
+            background-color: rgba(75, 192, 192, 1);
+          }
+          &.chart-label--purple {
+            background-color: rgba(153, 102, 255, 0.2);
+          }
+        }
+
+        span {
+          padding: 5px;
+        }
+      }
     }
   }
 }

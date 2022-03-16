@@ -60,15 +60,15 @@
               <hr class="card-divider" />
               <div class="card-wrapper">
                 <div class="card-item">
-                  <div class="cart-item-value">-</div>
+                  <div class="cart-item-value">93</div>
                   <div class="cart-item-label">Sp02</div>
                 </div>
                 <div class="card-item">
-                  <div class="cart-item-value">-</div>
+                  <div class="cart-item-value">115</div>
                   <div class="cart-item-label">Pulse Rate</div>
                 </div>
                 <div class="card-item">
-                  <div class="cart-item-value">-</div>
+                  <div class="cart-item-value">37</div>
                   <div class="cart-item-label">Temperature</div>
                 </div>
               </div>
@@ -135,6 +135,75 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="chart-monitoring">
+        <div class="chart-title">
+          <h4>Sp02 Chart</h4>
+        </div>
+        <div class="chart-content">
+          <canvas id="sp02-chart" width="400" height="150"></canvas>
+        </div>
+        <div class="chart-footer">
+          <div class="chart-badge">
+            <div class="chart-label chart-label--green"></div>
+            <span>Acceptable</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--yellow"></div>
+            <span>Get advice from healthcare team</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--red"></div>
+            <span>Urgent, Call 111</span>
+          </div>
+        </div>
+      </div>
+      <div class="chart-monitoring">
+        <div class="chart-title">
+          <h4>Pulse Rate Chart</h4>
+        </div>
+        <div class="chart-content">
+          <canvas id="pulse-rate-chart" width="400" height="150"></canvas>
+        </div>
+        <div class="chart-footer">
+          <div class="chart-badge">
+            <div class="chart-label chart-label--green"></div>
+            <span>Acceptable</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--yellow"></div>
+            <span>Get advice from healthcare team</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--red"></div>
+            <span>Urgent, Call 111</span>
+          </div>
+        </div>
+      </div>
+      <div class="chart-monitoring">
+        <div class="chart-title">
+          <h4>Temperature Chart</h4>
+        </div>
+        <div class="chart-content">
+          <canvas id="temperature-chart" width="400" height="150"></canvas>
+        </div>
+        <div class="chart-footer">
+          <div class="chart-badge">
+            <div class="chart-label chart-label--purple"></div>
+            <span>Cold</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--green"></div>
+            <span>Comfortable</span>
+          </div>
+          <div class="chart-badge">
+            <div class="chart-label chart-label--red"></div>
+            <span>Hot</span>
           </div>
         </div>
       </div>

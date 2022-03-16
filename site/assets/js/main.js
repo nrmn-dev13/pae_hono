@@ -187,4 +187,148 @@ $(document).ready(function () {
           : true
       );
   });
+
+  // chart monitoring oximeter
+
+  Chart.pluginService.register({
+    beforeDraw: function (chart, easing) {
+      if (chart.config.options.fillColor) {
+        var ctx = chart.chart.ctx;
+        var chartArea = chart.chartArea;
+        ctx.save();
+        let delta = 0;
+        const chartHeight = chartArea.bottom - chartArea.top;
+        const bottomBarHeight = chart.height - chartHeight - chartArea.top;
+        chart.config.options.fillColor.map((color) => {
+          const colorHeight = chartHeight * (color[0] / 100);
+          const colorBottom = chartArea.bottom + colorHeight;
+          ctx.fillStyle = color[1];
+
+          const x = chartArea.left,
+            y = chart.height - bottomBarHeight - colorHeight - delta,
+            width = chartArea.right - chartArea.left,
+            height = colorHeight;
+
+          delta += height;
+          ctx.fillRect(x, y, width, height);
+          ctx.restore();
+        });
+      }
+    },
+  });
+
+  const dataSp02 = {
+    labels: ["", "Morning", "Afternoon", "Night", ""],
+    datasets: [
+      {
+        label: "value",
+        borderColor: "black",
+        data: [null, 93, 96, 98, null],
+      },
+    ],
+  };
+
+  const ctx = document.getElementById("sp02-chart").getContext("2d");
+  const sp02 = new Chart(ctx, {
+    type: "line",
+    data: dataSp02,
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 100,
+              stepSize: 45,
+            },
+          },
+        ],
+      },
+      legend: { display: false },
+      fillColor: [
+        [91, "rgba(255,99,132,1)"],
+        [4, "rgba(255, 206, 86, 0.2)"],
+        [5, "rgba(75, 192, 192, 1)"],
+      ],
+    },
+  });
+
+  const dataTemperature = {
+    labels: ["", "Morning", "Afternoon", "Night", ""],
+    datasets: [
+      {
+        label: "value",
+        borderColor: "black",
+        data: [null, 34, 34, 34, null],
+      },
+    ],
+  };
+
+  const ctxTemperature = document
+    .getElementById("temperature-chart")
+    .getContext("2d");
+  const temperature = new Chart(ctxTemperature, {
+    type: "line",
+    data: dataTemperature,
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 60,
+              stepSize: 15,
+            },
+          },
+        ],
+      },
+      legend: { display: false },
+      fillColor: [
+        [40, "rgba(153, 102, 255, 0.2)"],
+        [20, "rgba(75, 192, 192, 1)"],
+        [40, "rgba(255,99,132,1)"],
+      ],
+    },
+  });
+
+  const dataPulse = {
+    labels: ["", "Morning", "Afternoon", "Night", ""],
+    datasets: [
+      {
+        label: "value",
+        borderColor: "black",
+        data: [null, 110, 95, 92, null],
+      },
+    ],
+  };
+
+  const ctxPulseRate = document
+    .getElementById("pulse-rate-chart")
+    .getContext("2d");
+  const pulse = new Chart(ctxPulseRate, {
+    type: "line",
+    data: dataPulse,
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              min: 50,
+              max: 130,
+              stepSize: 40,
+            },
+          },
+        ],
+      },
+      legend: { display: false },
+      fillColor: [
+        [60, "rgba(75, 192, 192, 1)"],
+        [20, "rgba(255, 206, 86, 0.2)"],
+        [20, "rgba(255,99,132,1)"],
+      ],
+    },
+  });
 });
